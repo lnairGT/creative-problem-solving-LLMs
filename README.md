@@ -7,11 +7,11 @@ This repository requires [Pytorch](https://github.com/pytorch/pytorch) and Huggi
 pip install -r requirements.txt
 ```
 
-To run the code:
+Running with the default seed setting will reproduce results from the paper, shown in the following images. To run the code:
 ```
 python creative-problem-solving/eval_task.py --task-type creative-obj
 ```
-Details of the models and task prompts are available in `dataset_cfg.py`. The task types include `creative-obj` that adds object feature information to the prompt; `creative-task` that adds task information to the prompt; and `creative-task-obj` that combines object and task information. Additionally `nominal` uses regular prompts, tested on cases where object replacement is not required, and `creative` tests the models with regular prompts in cases where an object replacement is required. The code runs the evaluation (creating random test sets based on a seed) and reports the result via plots as shown below. If the code is run as is with the default seed setting, the following plots will be generated for each task type. 
+Details of the models and task prompts are available in `dataset_cfg.py`. The task types include `creative-obj` that adds object feature information to the prompt; `creative-task` that adds task information to the prompt; and `creative-task-obj` that combines object and task information. Additionally `nominal` uses regular prompts, tested on cases where object replacement is not required, and `creative` tests the models with regular prompts in cases where an object replacement is required. The code runs the evaluation (creating random test sets based on a seed) and reports the result via plots as shown below.
 
 ### Using the `creative` prompt
 ![alt text](assets/Viz_creative.png "")
