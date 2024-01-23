@@ -28,6 +28,9 @@ Details of the models and task prompts are available in `dataset_cfg.py`. The ta
 The full testing dataset consists of 16 RGB images of objects, from which subsets are randomly chosen.
 ![alt text](assets/artificial-dataset.png "")
 
+## Reproducibility and compute resources note
+This code was tested with `Python 3.10.12`. It was run on a single NVIDIA A100 GPU. All the versions of other packages used are noted in `requirements.txt`.
+
 # References
 
 # Acknowledgements
