@@ -1,0 +1,6 @@
+torch
+transformers
+pillow
+tqdm
+numpy
+matplotlib
