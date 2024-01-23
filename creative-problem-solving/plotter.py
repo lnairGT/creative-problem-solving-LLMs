@@ -6,7 +6,7 @@ def plot_results(mode, data):
     tasks = ["Scoop", "Hammer", "Spatula", "Toothpick", "Pliers", "Overall"]
     data = {k: list(v.values()) for k, v in data.items()}
     task_type = mode
-    # Create a N_models x N_tasks grid of random values between 0 and 1
+    # Create a N_models x N_tasks grid
     N_tasks = len(tasks)
     N_models = len(data)
     grid_values = np.random.rand(N_models, N_tasks)
