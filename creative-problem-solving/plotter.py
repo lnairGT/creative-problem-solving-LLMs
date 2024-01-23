@@ -15,6 +15,7 @@ def plot_results(mode, data):
 
     # Plot the grid with shading
     cmap = {
+        "nominal": "Reds",
         "creative": "Oranges",
         "creative-obj": "Purples",
         "creative-task": "Greens",
@@ -51,6 +52,8 @@ def plot_results(mode, data):
         title = "Model performance with task augmented prompts"
     elif task_type == "creative-task-obj":
         title = "Model performance with object and task augmented prompts"
+    elif task_type == "nominal":
+        title = "Model performance with regular prompts (no object replacement needed)"
     plt.title(title)
 
     plt.tight_layout()
