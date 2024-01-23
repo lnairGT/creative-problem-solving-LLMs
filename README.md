@@ -2,6 +2,11 @@
 This repository contains data and code for _preliminary_ experiments demonstrating creative problem solving in LLMs, inspired by Computational Creativity literature. The code provided in this repository evaluates the capabilities of LLMs to identify creative object replacements when the required objects are missing, e.g., substituting a bowl for a scoop. The approach evaluates performances of the LLMs for different prompts such prompts that are augmented with relevant object features.
 
 ## Instructions for running the code
+This repository requires [Pytorch](https://github.com/pytorch/pytorch) and HuggingFace [Transformers](https://github.com/huggingface/transformers) libraries. 
+```
+pip install -r requirements.txt
+```
+
 To run the code:
 ```
 python creative-problem-solving/eval_task.py --task-type creative-obj
