@@ -105,7 +105,7 @@ def main(model_name, args):
         }
 
         # Create an augmented version of the creative task
-        # We want to ensure that the same test objects are used for "creative" and "creative-obj"
+        # We want to ensure that the same test objects are used for "creative" and other prompts
         # Otherwise it will not be a fair comparison
         if mode == "creative-obj":
             dataset_mapping["creative-obj"] = {
@@ -157,10 +157,10 @@ def main(model_name, args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-                description='Creative vs. Nominal Problem Solving',
+                description='Computational Creativity inspired prompting for creative problem solving',
         )
     parser.add_argument(
-        "--task-type", type=str, required=True, help="Choose which prompts to use"
+        "--task-type", type=str, required=True, help="Choose which prompt type to use"
     )
     parser.add_argument(
         "--seed", type=int, default=42, help="Choose seed for experiment"
