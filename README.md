@@ -29,10 +29,5 @@ The full testing dataset consists of 16 RGB images of objects, from which subset
 ![alt text](assets/artificial-dataset.png "")
 
 # References
-If you find this repository useful, kindly consider citing the following paper:
-```
-[TBD]
-```
 
 # Acknowledgements
-This work is inspired by the Object-Replacement-Object-Composition framework from Computational Creativity - see `Olteteanu and Falomir, 2016: Object replacement and object composition in a creative cognitive system. Towards a computational solver of the alternative uses test`
