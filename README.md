@@ -29,7 +29,7 @@ The full testing dataset consists of 16 RGB images of objects, from which subset
 ![alt text](assets/artificial-dataset.png "")
 
 ## Reproducibility and compute resources note
-This code was tested with `Python 3.10.12`. It was run on a single NVIDIA A100 GPU. All the versions of other packages used are noted in `requirements.txt`.
+This code was tested with `Python 3.10.12`. It was run on a single NVIDIA A100 GPU. All the versions of other packages used are noted in `requirements.txt`. We installed Pytorch 1.13.0 for CUDA 11.6. For more details on installation, please see Pytorch [Installation Instructions](https://pytorch.org/get-started/locally/).
 
 # References
 

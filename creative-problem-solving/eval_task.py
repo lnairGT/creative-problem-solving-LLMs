@@ -22,11 +22,11 @@ def get_model(model_name):
     return model, processor
 
 
-def run_vilt_eval(model, processor, text, images, names):
+def run_vilt_eval(model, processor, text, images, names, device):
     results = {}
     for i, img in enumerate(images):
         inputs = processor(img, text, return_tensors="pt")
-        inputs = {k: v.cuda() for k, v in inputs.items()}
+        inputs = {k: v.to(device) for k, v in inputs.items()}
         with torch.no_grad():
             outputs = model(**inputs)
         logits = outputs.logits  # this is the image-text similarity score
@@ -43,9 +43,9 @@ def run_vilt_eval(model, processor, text, images, names):
     return predicted_object
 
 
-def run_clip_eval(model, processor, text, images, names):
+def run_clip_eval(model, processor, text, images, names, device):
     inputs = processor(text=text, images=images, return_tensors="pt", padding=True)
-    inputs = {k: v.cuda() for k, v in inputs.items()}
+    inputs = {k: v.to(device) for k, v in inputs.items()}
     with torch.no_grad():
         outputs = model(**inputs)
     logits_per_image = outputs.logits_per_image  # this is the image-text similarity score
