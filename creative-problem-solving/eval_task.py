@@ -134,9 +134,9 @@ def main(model_name, args):
                     names.append(name)
 
             if "vilt" in model_name:
-                predicted_object = run_vilt_eval(model, processor, text, images, names)
+                predicted_object = run_vilt_eval(model, processor, text, images, names, device)
             else:
-                predicted_object = run_clip_eval(model, processor, text, images, names)
+                predicted_object = run_clip_eval(model, processor, text, images, names, device)
             if args.verbose:
                 print(f"Mode: {mode}, Text: {text}, Object: {predicted_object}, All objects: {names}")
             accuracy += get_accuracy(text, predicted_object, ground_truth[mode])
@@ -175,7 +175,7 @@ if __name__ == "__main__":
         "creative-obj",
         "creative-task",
         "creative-task-obj"
-    ]
+    ], "Allowed task types: creative/nominal/creative-obj/creative-task/creative-task-obj"
 
     plotting_data = {}
     for name in hf_model_name.keys():
