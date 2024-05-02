@@ -15,19 +15,19 @@ python eval_task.py --task-type creative-obj
 Details of the models and task prompts are available in `dataset_cfg.py`. The task types include `creative-obj` that adds object feature information (affordance) to the prompt; `creative-task` that adds task information to the prompt; and `creative-task-obj` that combines object and task information. Additionally `nominal` uses regular prompts, tested on cases where object replacement is not required, and `creative` tests the models with regular prompts in cases where an object replacement is required. The code runs the evaluation (creating random test sets based on the seed) and reports the result via plots as shown below.
 
 ### Using the `creative` prompt
-![alt text](assets/Viz_creative.png "")
+<img src="assets/Viz_creative.png" alt="" width="400"/>
 
 ### Using the `creative-obj` prompt
-![alt text](assets/Viz_creative-obj.png "")
+<img src="assets/Viz_creative-obj.png" alt="" width="400"/>
 
 ### Using the `creative-task` prompt
-![alt text](assets/Viz_creative-task.png "")
+<img src="assets/Viz_creative-task.png" alt="" width="400"/>
 
 ### Using the `creative-task-obj` prompt
-![alt text](assets/Viz_creative-task-obj.png "")
+<img src="assets/Viz_creative-task-obj.png" alt="" width="400"/>
 
 The full testing dataset consists of 16 RGB images of objects, from which subsets are randomly chosen.
-![alt text](assets/artificial-dataset.png "")
+<img src="assets/artificial-dataset.png" alt="" width="600"/>
 
 ## Reproducibility and compute resources note
 This code was tested with `Python 3.10.12`. It was run on a single NVIDIA A100 GPU. All the versions of other packages used are noted in `requirements.txt`. We installed Pytorch 1.13.0 for CUDA 11.6. For more details on installation, please see Pytorch [Installation Instructions](https://pytorch.org/get-started/locally/).
