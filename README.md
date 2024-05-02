@@ -1,5 +1,5 @@
 # Creative problem solving in LLMs
-This repository contains data and code for _preliminary_ experiments demonstrating creative problem solving in LLMs, inspired by Computational Creativity literature. The code provided in this repository evaluates the capabilities of LLMs to identify creative object replacements when the required objects are missing, e.g., substituting a bowl for a scoop. The approach evaluates performances of the LLMs for different prompts, e.g., prompts that are augmented with relevant object features.
+This repository contains data and code for preliminary experiments demonstrating creative problem solving in LLMs, inspired by Computational Creativity literature. The code provided in this repository prompts LLMs (image + text prompts) to identify creative object replacements (object substitution) when the required objects are missing, e.g., substituting a bowl for a scoop. <ins>This work shows that prompts that are augmented with relevant object features (i.e., affordances) enable LLMs to effectively reason about object substitutions</ins>.
 
 ## Instructions for running the code
 This repository requires [Pytorch](https://github.com/pytorch/pytorch) and HuggingFace [Transformers](https://github.com/huggingface/transformers) libraries. 
@@ -31,7 +31,3 @@ The full testing dataset consists of 16 RGB images of objects, from which subset
 
 ## Reproducibility and compute resources note
 This code was tested with `Python 3.10.12`. It was run on a single NVIDIA A100 GPU. All the versions of other packages used are noted in `requirements.txt`. We installed Pytorch 1.13.0 for CUDA 11.6. For more details on installation, please see Pytorch [Installation Instructions](https://pytorch.org/get-started/locally/).
-
-# References
-
-# Acknowledgements
